@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<h1>{{ title|cut:' '|cut:'?' }}</h1>
+<p>{{ float|add:'50' }}</p>
+<p>{{list}}</p>
+<p>{{set}}</p>
+<p>{{dict.key_1}}</p>
+<p>{{obj.a}}</p>
+
+{% block content %}
+
+{% include 'women/includes/nav.html' only %}
+
+<ul>
+    {% for p in posts %}
+    {% if p.is_published %}
+    <li>
+        <h2>{{ p.title}}</h2>
+        <p>{{ p.content }}</p>
+        <p><a href="{% url 'post' p.id %}">Читать пост</a></p>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% include 'women/includes/nav.html' %}
+
+{% endblock %}

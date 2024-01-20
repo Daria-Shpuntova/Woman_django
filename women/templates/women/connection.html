@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<div class="cont">
+    <div class="cont1">
+        <p><span>Адрес:</span> Россия, Москва</p>
+        <p><span>Телефон:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@site.ru</a></p>
+    </div>
+    <div class="cont1">
+        <div style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                 style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
+        <a href="https://yandex.ru/maps/213/moscow/geo/krasnaya_ploshchad/1520633025/?indoorLevel=1&ll=37.620941%2C55.753575&utm_medium=mapframe&utm_source=maps&z=17.58"
+                 style="color:#eee;font-size:12px;position:absolute;top:14px;">Красная площадь — Яндекс Карты</a>
+        <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.620941%2C55.753575&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjMzMDI1EjnQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JrRgNCw0YHQvdCw0Y8g0L_Qu9C-0YnQsNC00YwiCg0dfBZCFaIDX0I%2C&z=17.58"
+                  width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+</div>
+
+    </div>
+</div>
+{% endblock %}
+
